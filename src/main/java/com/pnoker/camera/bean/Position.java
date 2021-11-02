@@ -10,7 +10,6 @@ import java.util.List;
  */
 
 public class Position {
-    private static final long serialVersionUID = 1L;
 
     private String name;
 
@@ -18,10 +17,6 @@ public class Position {
     private int type;
 
     private List<Double> position;
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public String getName() {
         return name;
