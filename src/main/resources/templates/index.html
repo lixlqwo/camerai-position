@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>进京证违章摄像头分布</title>
+    <title>1234</title>
     <link rel="stylesheet" href="layui/css/layui.css">
     <style>
         html, body, #container {
@@ -42,6 +42,9 @@
             success: function (positions) {
                 positions.forEach(function (position) {
                     let prefix = "<span class='camera-red'>[精确] </span>", icon = "icon/camera-red.png";
+                    if (position.type === 1) {
+                        return
+                    }
                     if (position.type === 1) {
                         prefix = "<span class='camera-green'>[模糊] </span>", icon = "icon/camera-green.png";
                     }

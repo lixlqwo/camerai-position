@@ -1,7 +1,7 @@
 package com.pnoker.camera.controller;
 
 import com.pnoker.camera.bean.Position;
-import com.pnoker.camera.service.PositionService;
+import com.pnoker.camera.service.PositionServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +16,7 @@ import java.util.List;
 public class MainController {
 
     @Resource
-    private PositionService positionService;
+    private PositionServiceImpl positionService;
 
     @GetMapping(value = "/")
     public String index() {
@@ -26,6 +26,6 @@ public class MainController {
     @ResponseBody
     @GetMapping(value = "/positions")
     public List<Position> positions() {
-        return positionService.getPositionFromWeb();
+        return positionService.getPositions();
     }
 }

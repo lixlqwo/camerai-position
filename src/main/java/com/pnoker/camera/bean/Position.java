@@ -9,7 +9,7 @@ import java.util.List;
  * @author pnoker
  */
 
-public class Position implements Serializable {
+public class Position {
     private static final long serialVersionUID = 1L;
 
     private String name;
@@ -17,7 +17,6 @@ public class Position implements Serializable {
     @JSONField(alternateNames = "aa")
     private int type;
 
-    @JSONField(alternateNames = "center")
     private List<Double> position;
 
     public static long getSerialVersionUID() {
@@ -30,5 +29,21 @@ public class Position implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public List<Double> getPosition() {
+        return position;
+    }
+
+    public void setPosition(List<Double> position) {
+        this.position = position;
     }
 }

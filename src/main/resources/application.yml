@@ -19,6 +19,6 @@ spring:
 
 logging:
   level:
-    com.pnoker: DEBUG
+    com.pnoker: INFO
   file:
     name: logs/${spring.application.name}.log
