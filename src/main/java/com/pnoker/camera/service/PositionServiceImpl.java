@@ -53,7 +53,6 @@ public class PositionServiceImpl {
             e.printStackTrace();
         }
 
-
         int start = content.indexOf("var LabelsData = [");
         int end = content.indexOf("var title = '详细';");
 
